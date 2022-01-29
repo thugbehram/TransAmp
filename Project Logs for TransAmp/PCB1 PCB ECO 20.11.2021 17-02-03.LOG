@@ -1,0 +1,22 @@
+Added Component: Designator=D3(20-QFN (4x4))
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer"; Value = "SILICON LABS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Model"; Value = "SI4464-B1B-FM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "QFN-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "URL"; Value = "https://www.silabs.com/wireless/proprietary/ezradiopro-sub-ghz-ics/device.si4464"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "SI4464-B1B-FM SILICON LABS"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD3_1 Pin=D3-1
+Added Pin To Net: NetName=NetC21_2 Pin=D3-4
+Added Pin To Net: NetName=GND Pin=D3-6
+Added Pin To Net: NetName=NetD3_8 Pin=D3-8
+Added Pin To Net: NetName=NetD3_9 Pin=D3-9
+Added Pin To Net: NetName=NetD3_10 Pin=D3-10
+Added Pin To Net: NetName=NetD3_12 Pin=D3-12
+Added Pin To Net: NetName=NetD3_13 Pin=D3-13
+Added Pin To Net: NetName=NetD3_14 Pin=D3-14
+Added Pin To Net: NetName=NetD3_15 Pin=D3-15
+Added Pin To Net: NetName=GND Pin=D3-18
+Added Pin To Net: NetName=GND Pin=D3-21
+Added Pin To Net: NetName=GND Pin=D3-21
+Added Pin To Net: NetName=GND Pin=D3-21
+Added Member To Class: ClassName=Sheet2 Member=Component D3 SI4464-B1B-FM

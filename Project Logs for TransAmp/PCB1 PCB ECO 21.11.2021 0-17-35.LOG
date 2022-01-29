@@ -1,0 +1,32 @@
+Removed Pin From Net: NetName=GND Pin=C20-1
+Removed Pin From Net: NetName=VCC Pin=C20-2
+Removed Pin From Net: NetName=GND Pin=X8-2
+Removed Pin From Net: NetName=GND Pin=X8-2
+Removed Pin From Net: NetName=GND Pin=X8-2
+Removed Pin From Net: NetName=GND Pin=X8-2
+Removed Pin From Net: NetName=GND Pin=X9-2
+Removed Pin From Net: NetName=GND Pin=X9-2
+Removed Pin From Net: NetName=GND Pin=X9-2
+Removed Pin From Net: NetName=GND Pin=X9-2
+Removed Pin From Net: NetName=GND Pin=X10-2
+Removed Pin From Net: NetName=GND Pin=X10-2
+Removed Pin From Net: NetName=GND Pin=X10-2
+Removed Pin From Net: NetName=GND Pin=X10-2
+Change Component Comment : Designator=C20 Old Comment=3300 ïÔ New Comment=0,1 ìêÔ
+Change component parameters: Designator = "C20"; Footprint = "CH0603C"; UniqueID = "\KHLKUAXU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentKind"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "HelpURL"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "MURATA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Model"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "TypeDielectric"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "0,1 ìêÔ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "0603-X7R-50Â-0,1 ìêÔ±5% MURATA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50Â"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C20-2
+Added Pin To Net: NetName=NetC20_1 Pin=C20-1
+Added Pin To Net: NetName=NetC20_1 Pin=D3-8
+Added Pin To Net: NetName=NetC20_1 Pin=R9-2
+Added Net: Name=NetC20_1

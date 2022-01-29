@@ -1,0 +1,441 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD17\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">21.11.2021</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">22:28:26</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc" class="file"><acronym title="C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc">C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">35</td></tr>
+</table>
+</td>
+</table><a name="IDVFVB1ULR3IEHJYJYE43CJQPWQO1O41PNKU4M4FFTFKVKEM3HOH3J"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDU0HIQNFT112SPTTMF2MGHAL1XDRH2K4WTMPR1BOVMBDNCP51N5IO">Clearance Constraint (Gap=0.2mm) (InPolygon),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHDPJV2VXEUXMFISKZBI354XUUH5LMSS52VGWW2BTCHWI3GMUS2KG">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYTX3MIEOKYPFMQEIDGSAZVVOE2GVSWPI3ND5RHMOMDGSNAAO0DE">Clearance Constraint (Gap=0.3mm) (OnLayer('Multi-Layer') and IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID50KOUQCE2ZEWB2VY2DBEAUSC0MQ0PNUPELMPRFBO4ATH4WDESPBL">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">30</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3Z5CLVG4JYOCMLQJHSAPC4VLLZRTVXBXZGFHXBDKZF5SCHIO0PJ">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCBJUJD4FNKKFNWUWPVWFWNJ5IZMQIYHJAT315PYJMGV1NYPPBWD">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWQ3N4X0I3KQ5NEE13S3RFMTRWEVEAI0JE03RGHOTEZZUZVRIOFVK">Width Constraint (Min=0.2mm) (Max=10mm) (Preferred=0.2mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEM5JRNS1SU10K4EPGC1OV3TRFTFKL0G2HQRYAJZGHC5GGNSL0HN">Power Plane Connect Rule(Relief Connect )(Expansion=0.5mm) (Conductor Width=0.5mm) (Air Gap=0.3mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDC4ZHPM3NF0MYN5MGJHWZRBPISKISEY0MTEJ3Q2HIFOJGMNDMUHS">Minimum Annular Ring (Minimum=0.13mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5MIX3UPBLOTKBYL3XCG2W1255GYTZXCYDY3C3NMXY1UV1J2JZTM">Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHRZA1K3JH42LP2Z3JHWO35EVIGN23GOOOGAHI2G2WVAMQU4NIUXI">Hole To Hole Clearance (Gap=0.3mm) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZKZ4JRPDRCAIGT44IJ3INMYLOMZTRROUIKRG3BCQGQYTAH35OMWK">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQLU1FWIRVZJEJCIKZJTCAGLZIFCFHQSROEJBNCOQAOVEPC0YBKOG">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQY5QUBYCU3QEEFRZWBBCAIFPQJGSZNDWJBZY04JIQGF13JTGTGFG">Height Constraint (Min=0mm) (Max=50mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">35</td>
+</tr>
+</table><br><a name="ID50KOUQCE2ZEWB2VY2DBEAUSC0MQ0PNUPELMPRFBO4ATH4WDESPBL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3564.324mil|Location2.X=3593.157mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3564.324mil|Location2.X=3593.157mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True">Short-Circuit Constraint: Between Via (40.9mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.9mm][Y = 127.7mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True">Short-Circuit Constraint: Between Via (40.3mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 127.7mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True">Short-Circuit Constraint: Between Via (40.3mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 127.7mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3517.08mil|Location2.X=3545.912mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3517.08mil|Location2.X=3545.912mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True">Short-Circuit Constraint: Between Via (39.7mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 89.7mm][Y = 127.7mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3564.324mil|Location2.X=3593.157mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3564.324mil|Location2.X=3593.157mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True">Short-Circuit Constraint: Between Via (40.9mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.9mm][Y = 128.9mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3564.324mil|Location2.X=3593.157mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3564.324mil|Location2.X=3593.157mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True">Short-Circuit Constraint: Between Via (40.9mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.9mm][Y = 128.3mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3564.324mil|Location2.X=3593.157mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3564.324mil|Location2.X=3593.157mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True">Short-Circuit Constraint: Between Via (40.9mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.9mm][Y = 129.5mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True">Short-Circuit Constraint: Between Via (40.3mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 129.5mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True">Short-Circuit Constraint: Between Via (40.3mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 128.3mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True">Short-Circuit Constraint: Between Via (40.3mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 128.9mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True">Short-Circuit Constraint: Between Via (40.3mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 129.5mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True">Short-Circuit Constraint: Between Via (40.3mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 128.3mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True">Short-Circuit Constraint: Between Via (40.3mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 128.9mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3517.08mil|Location2.X=3545.912mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3517.08mil|Location2.X=3545.912mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True">Short-Circuit Constraint: Between Via (39.7mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 89.7mm][Y = 129.5mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3517.08mil|Location2.X=3545.912mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3517.08mil|Location2.X=3545.912mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True">Short-Circuit Constraint: Between Via (39.7mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 89.7mm][Y = 128.3mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3517.08mil|Location2.X=3545.912mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3517.08mil|Location2.X=3545.912mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True">Short-Circuit Constraint: Between Via (39.7mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 89.7mm][Y = 128.9mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3611.568mil|Location2.X=3640.401mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3611.568mil|Location2.X=3640.401mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True">Short-Circuit Constraint: Between Via (42.1mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 92.1mm][Y = 127.7mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3611.568mil|Location2.X=3640.401mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3611.568mil|Location2.X=3640.401mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True">Short-Circuit Constraint: Between Via (42.1mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 92.1mm][Y = 129.5mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3611.568mil|Location2.X=3640.401mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3611.568mil|Location2.X=3640.401mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True">Short-Circuit Constraint: Between Via (42.1mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 92.1mm][Y = 128.3mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3611.568mil|Location2.X=3640.401mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3611.568mil|Location2.X=3640.401mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True">Short-Circuit Constraint: Between Via (42.1mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 92.1mm][Y = 128.9mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3564.324mil|Location2.X=3593.157mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3564.324mil|Location2.X=3593.157mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True">Short-Circuit Constraint: Between Via (40.9mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.9mm][Y = 130.1mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True">Short-Circuit Constraint: Between Via (40.3mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 130.1mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.702mil|Location2.X=3569.535mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True">Short-Circuit Constraint: Between Via (40.3mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 130.1mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3517.08mil|Location2.X=3545.912mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3517.08mil|Location2.X=3545.912mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True">Short-Circuit Constraint: Between Via (39.7mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 89.7mm][Y = 130.1mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3611.568mil|Location2.X=3640.401mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3611.568mil|Location2.X=3640.401mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True">Short-Circuit Constraint: Between Via (42.1mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 92.1mm][Y = 130.1mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.946mil|Location2.X=3616.779mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.946mil|Location2.X=3616.779mil|Location1.Y=5013.142mil|Location2.Y=5041.975mil|Absolute=True">Short-Circuit Constraint: Between Via (41.5mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 91.5mm][Y = 127.7mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.946mil|Location2.X=3616.779mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.946mil|Location2.X=3616.779mil|Location1.Y=5084.009mil|Location2.Y=5112.841mil|Absolute=True">Short-Circuit Constraint: Between Via (41.5mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 91.5mm][Y = 129.5mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.946mil|Location2.X=3616.779mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.946mil|Location2.X=3616.779mil|Location1.Y=5036.765mil|Location2.Y=5065.597mil|Absolute=True">Short-Circuit Constraint: Between Via (41.5mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 91.5mm][Y = 128.3mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.946mil|Location2.X=3616.779mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.946mil|Location2.X=3616.779mil|Location1.Y=5060.387mil|Location2.Y=5089.219mil|Absolute=True">Short-Circuit Constraint: Between Via (41.5mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 91.5mm][Y = 128.9mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.946mil|Location2.X=3616.779mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.946mil|Location2.X=3616.779mil|Location1.Y=5107.631mil|Location2.Y=5136.463mil|Absolute=True">Short-Circuit Constraint: Between Via (41.5mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 91.5mm][Y = 130.1mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDHRZA1K3JH42LP2Z3JHWO35EVIGN23GOOOGAHI2G2WVAMQU4NIUXI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole To Hole Clearance (Gap=0.3mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3550.681mil|Location2.X=3559.555mil|Location1.Y=5070.366mil|Location2.Y=5079.24mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3550.681mil|Location2.X=3559.555mil|Location1.Y=5070.366mil|Location2.Y=5079.24mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.3mm) Between Via (40.3mm,53.9mm) from Top Layer to Bottom Layer And Via (40.3mm,53.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3550.681mil|Location2.X=3559.555mil|Location1.Y=5046.744mil|Location2.Y=5055.618mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3550.681mil|Location2.X=3559.555mil|Location1.Y=5046.744mil|Location2.Y=5055.618mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.3mm) Between Via (40.3mm,53.3mm) from Top Layer to Bottom Layer And Via (40.3mm,53.3mm) from Top Layer to Bottom Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3550.681mil|Location2.X=3559.555mil|Location1.Y=5023.122mil|Location2.Y=5031.996mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3550.681mil|Location2.X=3559.555mil|Location1.Y=5023.122mil|Location2.Y=5031.996mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.3mm) Between Via (40.3mm,52.7mm) from Top Layer to Bottom Layer And Via (40.3mm,52.7mm) from Top Layer to Bottom Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3550.681mil|Location2.X=3559.555mil|Location1.Y=5093.988mil|Location2.Y=5102.862mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3550.681mil|Location2.X=3559.555mil|Location1.Y=5093.988mil|Location2.Y=5102.862mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.3mm) Between Via (40.3mm,54.5mm) from Top Layer to Bottom Layer And Via (40.3mm,54.5mm) from Top Layer to Bottom Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3550.681mil|Location2.X=3559.555mil|Location1.Y=5117.61mil|Location2.Y=5126.484mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3550.681mil|Location2.X=3559.555mil|Location1.Y=5117.61mil|Location2.Y=5126.484mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.3mm) Between Via (40.3mm,55.1mm) from Top Layer to Bottom Layer And Via (40.3mm,55.1mm) from Top Layer to Bottom Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

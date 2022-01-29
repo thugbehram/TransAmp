@@ -1,0 +1,14 @@
+Added Component: Designator=Z1(OSC: 3225)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.jauch.com/downloadfile/57ff72b1b7707_2612e42791cc621776f7/jt33_190222_online.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "JAUCH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Model"; Value = "JT33-B-K-3,3-LF-26,0MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "3.2mm x 2.5mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=Z1-1
+Added Pin To Net: NetName=GND Pin=Z1-2
+Added Pin To Net: NetName=VCC Pin=Z1-4
+Added Pin To Net: NetName=NetD3_17 Pin=D3-17
+Added Pin To Net: NetName=NetD3_17 Pin=Z1-3
+Added Net: Name=NetD3_17
+Added Member To Class: ClassName=Sheet2 Member=Component D3 SI4464-B1B-FM
+Added Member To Class: ClassName=Sheet2 Member=Component Z1 JT33-B-K-3,3-LF-26,0MHz

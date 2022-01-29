@@ -1,0 +1,53 @@
+Removed Pin From Net: NetName=GND Pin=X2-2
+Removed Pin From Net: NetName=GND Pin=X2-2
+Removed Pin From Net: NetName=GND Pin=X2-2
+Removed Pin From Net: NetName=GND Pin=X2-2
+Removed Pin From Net: NetName=GND Pin=X5-2
+Removed Pin From Net: NetName=GND Pin=X5-2
+Removed Pin From Net: NetName=GND Pin=X5-2
+Removed Pin From Net: NetName=GND Pin=X5-2
+Change Component Footprint: Designator=X5 Old Footprint=CON: SMA-EL New Footprint=CON: SMA
+Change Component Comment : Designator=X5 Old Comment=SMA New Comment=Connector SMA, 50 Ohm, 3GHz
+Change Component Designator: OldDesignator=C19 NewDesignator=C20
+Change Component Designator: OldDesignator=C20 NewDesignator=C21
+Change Component Designator: OldDesignator=C21 NewDesignator=C22
+Change Component Designator: OldDesignator=C22 NewDesignator=C23
+Change Component Designator: OldDesignator=C23 NewDesignator=C24
+Change Component Designator: OldDesignator=C24 NewDesignator=C26
+Change Component Designator: OldDesignator=C25 NewDesignator=C27
+Change Component Designator: OldDesignator=C26 NewDesignator=C28
+Change Component Designator: OldDesignator=C27 NewDesignator=C19
+Change Component Designator: OldDesignator=C28 NewDesignator=C25
+Change Component Designator: OldDesignator=X1 NewDesignator=X2
+Change component parameters: Designator = "X5"; Footprint = "CON: SMA"; UniqueID = "\QCTOUQWS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "CommentText"; Value = ""׀אחתול""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Frequency"; Value = "3GHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/5-1814832-1/A97594-ND/1755982"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Impedance"; Value = "50 Ohm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = "5-1814832-1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "TypeConnector"; Value = "Connector SMA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "Connector SMA, 50 Ohm, 3GHz"; VariantName = "[No Variations]"
+Added Component: Designator=X1(CON: SMA)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "CommentText"; Value = ""׀אחתול""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "3GHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/5-1814832-1/A97594-ND/1755982"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Impedance"; Value = "50 Ohm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "5-1814832-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeConnector"; Value = "Connector SMA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "Connector SMA, 50 Ohm, 3GHz"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=NetC20_2 New Net Name=NetC21_2
+Change Net Name : Old Net Name=NetC21_1 New Net Name=NetC22_1
+Change Net Name : Old Net Name=NetC21_2 New Net Name=NetC22_2
+Change Net Name : Old Net Name=NetC24_2 New Net Name=NetC26_2
+Change Net Name : Old Net Name=NetC25_2 New Net Name=NetC27_2
+Change Net Name : Old Net Name=NetC26_2 New Net Name=NetC28_2
+Change Net Name : Old Net Name=NetC27_1 New Net Name=NetC19_1
+Change Net Name : Old Net Name=NetC27_2 New Net Name=NetC19_2
+Added Pin To Net: NetName=NetX1_1 Pin=X1-1
+Added Pin To Net: NetName=NetX1_1 Pin=X5-1
+Added Net: Name=NetX1_1
+Added Room: Name=Sheet2

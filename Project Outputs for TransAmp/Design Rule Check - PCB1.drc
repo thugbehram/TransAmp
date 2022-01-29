@@ -1,0 +1,86 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Public\Documents\Altium\Projects\TransAmp\PCB1.PcbDoc
+Date     : 21.11.2021
+Time     : 22:28:26
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (InPolygon),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.3mm) (OnLayer('Multi-Layer') and IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Via (40.9mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.9mm][Y = 127.7mm]
+   Violation between Short-Circuit Constraint: Between Via (40.3mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 127.7mm]
+   Violation between Short-Circuit Constraint: Between Via (40.3mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 127.7mm]
+   Violation between Short-Circuit Constraint: Between Via (39.7mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 89.7mm][Y = 127.7mm]
+   Violation between Short-Circuit Constraint: Between Via (40.9mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.9mm][Y = 128.9mm]
+   Violation between Short-Circuit Constraint: Between Via (40.9mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.9mm][Y = 128.3mm]
+   Violation between Short-Circuit Constraint: Between Via (40.9mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.9mm][Y = 129.5mm]
+   Violation between Short-Circuit Constraint: Between Via (40.3mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 129.5mm]
+   Violation between Short-Circuit Constraint: Between Via (40.3mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 128.3mm]
+   Violation between Short-Circuit Constraint: Between Via (40.3mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 128.9mm]
+   Violation between Short-Circuit Constraint: Between Via (40.3mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 129.5mm]
+   Violation between Short-Circuit Constraint: Between Via (40.3mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 128.3mm]
+   Violation between Short-Circuit Constraint: Between Via (40.3mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 128.9mm]
+   Violation between Short-Circuit Constraint: Between Via (39.7mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 89.7mm][Y = 129.5mm]
+   Violation between Short-Circuit Constraint: Between Via (39.7mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 89.7mm][Y = 128.3mm]
+   Violation between Short-Circuit Constraint: Between Via (39.7mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 89.7mm][Y = 128.9mm]
+   Violation between Short-Circuit Constraint: Between Via (42.1mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 92.1mm][Y = 127.7mm]
+   Violation between Short-Circuit Constraint: Between Via (42.1mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 92.1mm][Y = 129.5mm]
+   Violation between Short-Circuit Constraint: Between Via (42.1mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 92.1mm][Y = 128.3mm]
+   Violation between Short-Circuit Constraint: Between Via (42.1mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 92.1mm][Y = 128.9mm]
+   Violation between Short-Circuit Constraint: Between Via (40.9mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.9mm][Y = 130.1mm]
+   Violation between Short-Circuit Constraint: Between Via (40.3mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 130.1mm]
+   Violation between Short-Circuit Constraint: Between Via (40.3mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 90.3mm][Y = 130.1mm]
+   Violation between Short-Circuit Constraint: Between Via (39.7mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 89.7mm][Y = 130.1mm]
+   Violation between Short-Circuit Constraint: Between Via (42.1mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 92.1mm][Y = 130.1mm]
+   Violation between Short-Circuit Constraint: Between Via (41.5mm,52.7mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 91.5mm][Y = 127.7mm]
+   Violation between Short-Circuit Constraint: Between Via (41.5mm,54.5mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 91.5mm][Y = 129.5mm]
+   Violation between Short-Circuit Constraint: Between Via (41.5mm,53.3mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 91.5mm][Y = 128.3mm]
+   Violation between Short-Circuit Constraint: Between Via (41.5mm,53.9mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 91.5mm][Y = 128.9mm]
+   Violation between Short-Circuit Constraint: Between Via (41.5mm,55.1mm) from Top Layer to Bottom Layer And Pad D1-21(40.9mm,53.9mm) on Top Layer Location : [X = 91.5mm][Y = 130.1mm]
+Rule Violations :30
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=10mm) (Preferred=0.2mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.5mm) (Conductor Width=0.5mm) (Air Gap=0.3mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.13mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.3mm) (All),(All)
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.3mm) Between Via (40.3mm,53.9mm) from Top Layer to Bottom Layer And Via (40.3mm,53.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.3mm) Between Via (40.3mm,53.3mm) from Top Layer to Bottom Layer And Via (40.3mm,53.3mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.3mm) Between Via (40.3mm,52.7mm) from Top Layer to Bottom Layer And Via (40.3mm,52.7mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.3mm) Between Via (40.3mm,54.5mm) from Top Layer to Bottom Layer And Via (40.3mm,54.5mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.3mm) Between Via (40.3mm,55.1mm) from Top Layer to Bottom Layer And Via (40.3mm,55.1mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+Rule Violations :5
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=50mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 35
+Waived Violations : 0
+Time Elapsed        : 00:00:02

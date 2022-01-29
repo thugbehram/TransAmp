@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=GND Pin=X1-2
+Removed Pin From Net: NetName=GND Pin=X1-2
+Removed Pin From Net: NetName=GND Pin=X1-2
+Removed Pin From Net: NetName=GND Pin=X1-2
+Removed Pin From Net: NetName=NetR3_2 Pin=X3-4
+Removed Pin From Net: NetName=NetR5_2 Pin=X3-6
+Removed Pin From Net: NetName=GND Pin=X5-2
+Removed Pin From Net: NetName=GND Pin=X5-2
+Removed Pin From Net: NetName=GND Pin=X5-2
+Removed Pin From Net: NetName=GND Pin=X5-2
+Added Pin To Net: NetName=NetR5_2 Pin=X3-4
+Added Pin To Net: NetName=NetR3_2 Pin=X3-6
+Added Member To Class: ClassName=Sheet2 Member=Component C19 Ceramic capacitor, 0.1 ÏÍ‘, X7R, ±10%, 16V, 0603, -55...+125∞C
+Added Member To Class: ClassName=Sheet2 Member=Component C25 Ceramic capacitor, 100 Ô‘, NP0, ±10%, 16V, 0603, -55...+125∞C
+Added Member To Class: ClassName=Sheet2 Member=Component X1 Connector SMA, 50 Ohm, 3GHz

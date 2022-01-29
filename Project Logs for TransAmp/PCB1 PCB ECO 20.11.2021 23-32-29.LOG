@@ -1,0 +1,33 @@
+Removed Pin From Net: NetName=GND Pin=X4-2
+Removed Pin From Net: NetName=GND Pin=X4-2
+Removed Pin From Net: NetName=GND Pin=X4-2
+Removed Pin From Net: NetName=GND Pin=X4-2
+Removed Pin From Net: NetName=GND Pin=X7-2
+Removed Pin From Net: NetName=GND Pin=X7-2
+Removed Pin From Net: NetName=GND Pin=X7-2
+Removed Pin From Net: NetName=GND Pin=X7-2
+Change Component Footprint: Designator=X4 Old Footprint=CON: SMA-EL New Footprint=CON: SMA
+Change Component Footprint: Designator=X7 Old Footprint=CON: SMA-EL New Footprint=CON: SMA
+Change Component Comment : Designator=X4 Old Comment=SMA New Comment=Connector SMA, 50 Ohm, 3GHz
+Change Component Comment : Designator=X7 Old Comment=SMA New Comment=Connector SMA, 50 Ohm, 3GHz
+Change component parameters: Designator = "X4"; Footprint = "CON: SMA"; UniqueID = "\EOBFTEWD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "CommentText"; Value = ""׀אחתול""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Frequency"; Value = "3GHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/5-1814832-1/A97594-ND/1755982"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Impedance"; Value = "50 Ohm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = "5-1814832-1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "TypeConnector"; Value = "Connector SMA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "Connector SMA, 50 Ohm, 3GHz"; VariantName = "[No Variations]"
+Change component parameters: Designator = "X7"; Footprint = "CON: SMA"; UniqueID = "\NLMFWPVI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "CommentText"; Value = ""׀אחתול""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Frequency"; Value = "3GHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/5-1814832-1/A97594-ND/1755982"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Impedance"; Value = "50 Ohm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = "5-1814832-1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "TypeConnector"; Value = "Connector SMA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "Connector SMA, 50 Ohm, 3GHz"; VariantName = "[No Variations]"
+Added Room: Name=Sheet2
